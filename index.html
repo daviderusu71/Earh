@@ -59,9 +59,19 @@ position:relative;
 
 
 header h1{
-font-size:56px;
-color:#38bdf8;
+font-size:64px;
+background:linear-gradient(90deg,#38bdf8,#22c55e,#38bdf8);
+background-size:200%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:shine 6s linear infinite;
 }
+
+@keyframes shine{
+0%{background-position:0%}
+100%{background-position:200%}
+}
+
 
 header p{
 max-width:600px;
@@ -92,7 +102,15 @@ gap:20px;
 background:#111827;
 padding:25px;
 border-radius:12px;
+transition:0.3s;
+border:1px solid #1f2937;
 }
+
+.card:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 0 25px rgba(56,189,248,0.4);
+}
+
 
 /* CONTACT */
 .contact{
@@ -112,6 +130,12 @@ font-weight:bold;
 border-radius:6px;
 cursor:pointer;
 margin-top:15px;
+}
+#bg{
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
 }
 
 /* MOBILE */
@@ -183,7 +207,35 @@ We focus on clean design, fast performance and simple user experience.
 <button onclick="alert('Thanks! Write me an email 🙂')">Get in touch</button>
 </div>
 </section>
+<canvas id="bg"></canvas>
+
+<script>
+const c=document.getElementById("bg");
+const ctx=c.getContext("2d");
+c.width=window.innerWidth;
+c.height=window.innerHeight;
+
+let particles=[];
+for(let i=0;i<80;i++){
+particles.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*2});
+}
+
+function draw(){
+ctx.clearRect(0,0,c.width,c.height);
+ctx.fillStyle="rgba(56,189,248,0.4)";
+particles.forEach(p=>{
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+ctx.fill();
+p.y+=0.2;
+if(p.y>c.height)p.y=0;
+});
+requestAnimationFrame(draw);
+}
+draw();
+</script>
 
 </body>
 </html>
+
 
