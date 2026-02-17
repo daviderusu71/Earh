@@ -42,9 +42,21 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(120deg,#020617,#0f172a);
-padding:20px;
+background:url("https://images.unsplash.com/photo-1492724441997-5dc865305da7") center/cover no-repeat;
+position:relative;
 }
+
+header::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(2,6,23,0.75);
+}
+
+header *{
+position:relative;
+}
+
 
 header h1{
 font-size:56px;
@@ -142,14 +154,24 @@ We focus on clean design, fast performance and simple user experience.
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e" style="width:100%;border-radius:8px;margin-bottom:10px">
 <h3>Branding</h3>
 <p>Logos and visual identity for your business.</p>
 </div>
+  
+
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" style="width:100%;border-radius:8px;margin-bottom:10px">
+<h3>Web Design</h3>
+<p>Modern responsive websites built for real clients.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" style="width:100%;border-radius:8px;margin-bottom:10px">
 <h3>Landing Pages</h3>
 <p>Simple pages that convert visitors into customers.</p>
 </div>
+
 </div>
 </section>
 
@@ -164,3 +186,4 @@ We focus on clean design, fast performance and simple user experience.
 
 </body>
 </html>
+
