@@ -1,99 +1,166 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Earth</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <section id="header">
-      <div class="container">
-        <nav>
-          <div class="logo"><h1>EARTH</h1></div>
-          <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-          </ul>
-          <div class="menu-btn"><img src="./img/menu.svg" alt="" /></div>
-        </nav>
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EARH Studio</title>
 
-        <div class="header-content">
-          <h1>EARTH</h1>
-          <p>ENDLESS POTENTIAL</p>
-          <button class="primary-btn">EXPLORE</button>
-        </div>
-      </div>
-    </section>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
 
-    <section id="services" class="container">
-      <div class="service">
-        <img src="./img/service-1.png" alt="" />
-        <h1>Web Desing</h1>
-        <p>
-          Custom web design for small businesses, we help you capture new
-          audiences and increase your sales.
-        </p>
-      </div>
-      <div class="service">
-        <img src="./img/service-2.png" alt="" />
-        <h1>Graphic Design</h1>
-        <p>
-          Custom graphic design for small businesses, we help you capture new
-          audiences and increase your sales.
-        </p>
-      </div>
-      <div class="service">
-        <img src="./img/service-3.png" alt="" />
-        <h1>Content Creation</h1>
-        <p>
-          Custom content creation for small businesses, we help you capture new
-          audiences and increase your sales.
-        </p>
-      </div>
-    </section>
+body{
+background:#0f172a;
+color:white;
+line-height:1.6;
+}
 
-    <section id="about" class="container">
-      <div class="about-content">
-        <h1>About-Us</h1>
-        <p>
-          Imade it so it is super easy to update and so that if flows perfectly
-          with my tutorals. Lots of love and hundreds of hours of work went into
-          this project, so I hope you enjoy it and find it useful. If you have
-          any questions or suggestions, please feel free to reach out to me.
-          Thank you for visiting my website!
-        </p>
-      </div>
-      <div class="about-img">
-        <img src="./img/about.png" alt="" />
-      </div>
-    </section>
+/* NAVBAR */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#020617;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
 
-    <section id="talk-to-us">
-      <div class="talk-to-us-content">
-        <h1>TALK TO US</h1>
-        <p>
-          Have any questions? We are always open to talk about your business,
-          new projects, creative opportunities and how we can help you achieve
-          your goals.
-        </p>
-        <button class="primary-btn">GET IN TOUCH</button>
-      </div>
-    </section>
+nav a{
+color:#38bdf8;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+}
 
-    <footer>
-      <ul class="footerlinks">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
-      <h1 class="logo">EARTH</h1>
-      <p>© 2026 EARTH. All rights reserved.</p>
-    </footer>
+/* HERO */
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(120deg,#020617,#0f172a);
+padding:20px;
+}
 
-    <script src="script.js"></script>
-  </body>
+header h1{
+font-size:56px;
+color:#38bdf8;
+}
+
+header p{
+max-width:600px;
+margin-top:20px;
+font-size:20px;
+}
+
+/* SECTIONS */
+section{
+padding:80px 20px;
+max-width:1000px;
+margin:auto;
+}
+
+h2{
+color:#38bdf8;
+margin-bottom:20px;
+}
+
+/* SERVICES */
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#111827;
+padding:25px;
+border-radius:12px;
+}
+
+/* CONTACT */
+.contact{
+background:#020617;
+text-align:center;
+border-radius:12px;
+padding:40px;
+margin-top:40px;
+}
+
+button{
+background:#38bdf8;
+border:none;
+padding:12px 20px;
+color:black;
+font-weight:bold;
+border-radius:6px;
+cursor:pointer;
+margin-top:15px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+header h1{font-size:36px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div><strong>EARH</strong></div>
+<div>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<header>
+<h1>EARH Studio</h1>
+<p>We create modern websites and visual identities for businesses that want to stand out online.</p>
+</header>
+
+<section id="about">
+<h2>About</h2>
+<p>
+EARH Studio helps small businesses build a professional online presence.
+We focus on clean design, fast performance and simple user experience.
+</p>
+</section>
+
+<section id="services">
+<h2>Services</h2>
+<div class="services">
+<div class="card">
+<h3>Web Design</h3>
+<p>Modern responsive websites built for real clients.</p>
+</div>
+
+<div class="card">
+<h3>Branding</h3>
+<p>Logos and visual identity for your business.</p>
+</div>
+
+<div class="card">
+<h3>Landing Pages</h3>
+<p>Simple pages that convert visitors into customers.</p>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="contact">
+<p>Interested in working together?</p>
+<p>Email: your@email.com</p>
+<button onclick="alert('Thanks! Write me an email 🙂')">Get in touch</button>
+</div>
+</section>
+
+</body>
 </html>
